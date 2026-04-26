@@ -1,91 +1,119 @@
-/* RESET & BASE */
+/* Mz D'z Dazzlin Blingz N Thingz 
+   Final Luxury Mobile App Stylesheet 
+*/
+
+/* 1. GLOBAL SETTINGS */
 body {
-    background-color: #050505;
-    color: #ffffff; /* This forces all base text to pure white */
+    background-color: #050505; /* Deep black for luxury feel */
+    color: #ffffff; /* Forces all base text to be Pure White */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 1. HEADER SECTION */
+/* 2. APP HEADER (HERO) */
 .hero {
     padding: 40px 20px;
     background: linear-gradient(180deg, #1a0033 0%, #050505 100%);
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 2px solid #222;
 }
 
 .main-logo {
     width: 150px;
     margin-bottom: 15px;
-    filter: drop-shadow(0 0 10px #a349a4);
+    filter: drop-shadow(0 0 10px #a349a4); /* Purple glow around logo */
 }
 
 .brand-title {
     font-size: 1.8rem;
-    color: #ffffff !important; /* Force White */
+    color: #ffffff !important; 
     text-transform: uppercase;
     font-weight: 800;
     margin: 10px 0;
+    letter-spacing: 1px;
 }
 
 .tagline {
     font-size: 1rem;
-    color: #d1a3ff !important; /* Force bright lavender */
+    color: #d1a3ff !important; /* Bright Lavender */
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
-/* 2. TIKTOK BUTTON */
+/* 3. TIKTOK LINK BUTTON */
 .cta-button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 14px 28px;
     background: linear-gradient(45deg, #fe2c55, #25f4ee);
-    color: #000000 !important; /* Keep text black on the bright button */
+    color: #000000 !important; /* Black text on bright button */
     text-decoration: none;
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: 800;
     font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3);
 }
 
-/* 3. FOUNDER SECTION */
+/* 4. FOUNDER SECTION */
 .about-me {
     background-color: #0a0a0a;
-    padding: 30px 20px;
+    padding: 30px 10px;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     gap: 20px;
+    background: #111;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #222;
 }
 
 .founder-photo {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     border: 2px solid #a349a4;
+    object-fit: cover;
 }
 
 .about-text h2 {
-    color: #ffffff !important; /* Force White */
+    color: #ffffff !important;
     font-size: 1.2rem;
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
 }
 
-.intro-text, .mission-statement {
-    color: #ffffff !important; /* Force White */
-    font-size: 0.9rem;
-    line-height: 1.6;
+.intro-text {
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/* 4. SHOP GRID */
+/* 5. CENTERED SECTION TITLE */
+.section-title {
+    text-align: center; /* THIS CENTERS THE TITLE */
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 40px 0 20px 0;
+    letter-spacing: 2px;
+    display: block;
+    width: 100%;
+}
+
+/* 6. SHOPPING GRID (2-COLUMNS) */
 .gear-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-    padding: 20px;
+    padding: 0 15px 40px 15px;
 }
 
 .gear-card {
@@ -94,23 +122,114 @@ body {
     border-radius: 15px;
     padding: 15px;
     text-align: center;
+    transition: transform 0.2s;
 }
 
 .gear-card h3 {
     color: #ffffff !important;
     font-size: 0.85rem;
     margin-bottom: 15px;
+    height: 40px; /* Keeps boxes aligned */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 5. PINK/PURPLE BUTTONS */
 .gear-card button {
     background-color: #a349a4;
     color: #ffffff !important;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* 7. MODAL (POPUP) STYLING */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 25% auto;
+    padding: 25px;
+    width: 85%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: 2px solid #a349a4;
+    text-align: center;
+}
+
+#selected-item-title {
+    color: #d1a3ff;
+    margin-bottom: 20px;
+}
+
+.selection-row {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.selection-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.checkout-btn {
+    background-color: #a349a4;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 8. FOOTER */
+.footer-checkout {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #222;
+}
+
+.footer-checkout p {
+    color: #d1a3ff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.security-badge {
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
