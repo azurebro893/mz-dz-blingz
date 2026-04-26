@@ -1,122 +1,116 @@
+/* RESET & BASE */
 body {
     background-color: #050505;
-    color: #fff;
+    color: #ffffff; /* This forces all base text to pure white */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* 1. HEADER SECTION */
 .hero {
-    padding: 30px 10px;
-    background: linear-gradient(180deg, #1a0033 0%, #000 100%);
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1a0033 0%, #050505 100%);
     text-align: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #333;
 }
 
 .main-logo {
-    width: 140px;
-    filter: drop-shadow(0 0 12px #a349a4);
+    width: 150px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px #a349a4);
 }
 
 .brand-title {
-    font-size: 1.4rem;
-    color: #d1a3ff;
+    font-size: 1.8rem;
+    color: #ffffff !important; /* Force White */
     text-transform: uppercase;
+    font-weight: 800;
     margin: 10px 0;
 }
 
+.tagline {
+    font-size: 1rem;
+    color: #d1a3ff !important; /* Force bright lavender */
+    margin-bottom: 20px;
+}
+
+/* 2. TIKTOK BUTTON */
 .cta-button {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    padding: 14px;
+    display: inline-block;
+    padding: 12px 25px;
     background: linear-gradient(45deg, #fe2c55, #25f4ee);
-    color: #000;
+    color: #000000 !important; /* Keep text black on the bright button */
     text-decoration: none;
-    border-radius: 12px;
-    font-weight: 800;
+    border-radius: 50px;
+    font-weight: bold;
     font-size: 0.9rem;
 }
 
-.gear-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    padding: 15px;
-}
-
-.gear-card {
-    background: #121212;
-    border-radius: 15px;
-    padding: 15px;
-    border: 1px solid #2a2a2a;
-    text-align: center;
-}
-
-.gear-card h3 {
-    font-size: 0.8rem;
-    min-height: 35px;
-}
-
-.gear-card button {
-    background: #a349a4;
-    border: none;
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
+/* 3. FOUNDER SECTION */
+.about-me {
+    background-color: #0a0a0a;
+    padding: 30px 20px;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    padding: 15px;
-    background: #0f0f0f;
-    margin: 15px;
-    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .founder-photo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: 2px solid #a349a4;
-    margin-right: 15px;
 }
 
-.about-text h2 { font-size: 0.9rem; margin: 0; color: #a349a4; }
-.intro-text { font-size: 0.75rem; margin: 5px 0 0; }
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
+.about-text h2 {
+    color: #ffffff !important; /* Force White */
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
 }
 
-.modal-content {
-    background: #1a1a1a;
-    margin: 30% auto;
-    padding: 25px;
-    width: 85%;
-    border-radius: 20px;
-    border: 1px solid #a349a4;
+.intro-text, .mission-statement {
+    color: #ffffff !important; /* Force White */
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
-.close { float: right; color: #fff; font-size: 24px; }
+/* 4. SHOP GRID */
+.gear-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
 
-.checkout-btn {
-    width: 100%;
+.gear-card {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 15px;
     padding: 15px;
-    background: #a349a4;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    margin-top: 15px;
+    text-align: center;
 }
 
-.footer-checkout { text-align: center; padding: 20px; font-size: 0.8rem; opacity: 0.6; }
+.gear-card h3 {
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+/* 5. PINK/PURPLE BUTTONS */
+.gear-card button {
+    background-color: #a349a4;
+    color: #ffffff !important;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
