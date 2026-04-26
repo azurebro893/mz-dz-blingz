@@ -1,6 +1,6 @@
 /**
  * Mz D'z Dazzlin Blingz N Thingz 
- * Main App Logic
+ * Final App Logic & PWA Integration
  */
 
 // 1. Open the Size/Style Selection Modal
@@ -14,7 +14,7 @@ function openOrder(productName) {
     // Show the modal
     modal.style.display = "block";
     
-    // Add a small animation effect for mobile feel
+    // Smooth fade-in for mobile feel
     modal.style.animation = "fadeIn 0.3s";
 }
 
@@ -38,22 +38,28 @@ function triggerCheckout() {
     const size = document.getElementById('size').value;
     const style = document.getElementById('gender').value;
     
-    // 1. Show a confirmation to the user
+    // User Confirmation
     alert(`Success! You've selected: \n\nItem: ${item} \nStyle: ${style} \nSize: ${size} \n\nRedirecting to secure payment...`);
     
     /**
-     * 2. REDIRECT TO PAYMENT
-     * Replace 'yourname' with your actual PayPal or CashApp handle.
-     * Example for PayPal: https://www.paypal.com/paypalme/YourBusinessName
-     * Example for CashApp: https://cash.app/$YourCashtag
+     * REDIRECT TO PAYMENT
+     * Update the 'yourname' below to your actual PayPal/CashApp link
      */
     const paymentLink = "https://www.paypal.com/paypalme/yourname"; 
     
     window.location.href = paymentLink;
 }
 
-// 5. Mobile Orientation Check (Optional)
-// Ensures the app looks good if the user rotates their phone
-window.addEventListener("orientationchange", function() {
-    console.log("Orientation changed, adjusting layout...");
-});
+// 5. PWA SERVICE WORKER REGISTRATION (The "App Wrapper")
+// This is what makes your site installable and fast on mobile
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => {
+                console.log('Mz Dz App Wrapper Active!', reg.scope);
+            })
+            .catch(err => {
+                console.log('App Wrapper Registration Failed:', err);
+            });
+    });
+}
