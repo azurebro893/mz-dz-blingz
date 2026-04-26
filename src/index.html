@@ -1,1 +1,70 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mz D'z Dazzlin Blingz N Thingz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="assets/home.png" alt="Mz D'z Logo" class="main-logo">
+        <h1 class="brand-title">Elevate Your Shine</h1>
+        <p class="tagline">Custom Blinged Apparel by Debra Day</p>
+        
+        <a href="https://www.tiktok.com/@username" target="_blank" class="cta-button">Browse the Collection on TikTok</a>
+    </header>
+
+    <section class="about-me">
+        <div class="about-container">
+            <img src="assets/debra.png" alt="Debra Day" class="founder-photo">
+            <div class="about-text">
+                <h2>The Visionary Behind the Sparkle</h2>
+                <p class="intro-text">
+                    "Hi, my name is <strong>Debra Day</strong>. As a serial entrepreneur, I’ve dedicated my career to empowering others through high-impact women’s retreats. Now, I’m bringing that same energy and passion to your wardrobe with my new custom bling-out clothing line."
+                </p>
+                <p class="mission-statement">
+                    From the retreat stage to the streets of Detroit, <strong>Mz D'z Dazzlin Blingz N Thingz</strong> is about making sure you never go unnoticed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-container">
+        <h2 class="section-title">Exclusive Collections</h2>
+        <div class="gear-grid">
+            <div class="gear-card"><h3>Detroit Lions Bling</h3><button onclick="openOrder('Detroit Lions Bling')">Select Style & Size</button></div>
+            <div class="gear-card"><h3>Detroit Pistons 313</h3><button onclick="openOrder('Detroit Pistons 313 Bling')">Select Style & Size</button></div>
+            <div class="gear-card"><h3>Mother's Day Mom Bling</h3><button onclick="openOrder('Mothers Day Mom Bling')">Select Style & Size</button></div>
+            <div class="gear-card"><h3>Dodgers Bling</h3><button onclick="openOrder('Dodgers Bling')">Select Style & Size</button></div>
+        </div>
+    </section>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="selected-item-title">Product Name</h2>
+            <div class="selection-row">
+                <label>Style:</label>
+                <select id="gender"><option value="Womens">Women's Cut</option><option value="Mens">Men's / Unisex</option></select>
+            </div>
+            <div class="selection-row">
+                <label>Size:</label>
+                <select id="size"><option value="S">Small</option><option value="M">Medium</option><option value="L">Large</option><option value="XL">XL</option><option value="2XL">2XL</option></select>
+            </div>
+            <button class="checkout-btn" onclick="triggerCheckout()">Proceed to Secure Checkout</button>
+        </div>
+    </div>
+
+    <footer class="footer-checkout">
+        <h3>Secure Payment Options</h3>
+        <p>PayPal • Venmo • Visa • Mastercard • Cash App</p>
+        <div class="security-badge">🔒 Encrypted Secure Checkout</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
