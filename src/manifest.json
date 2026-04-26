@@ -1,0 +1,23 @@
+{
+  "short_name": "Mz D'z",
+  "name": "Mz D'z Dazzlin Blingz N Thingz",
+  "description": "Custom Blinged Apparel & Boutique",
+  "icons": [
+    {
+      "src": "assets/home.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/home.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1a0033",
+  "background_color": "#050505"
+}
