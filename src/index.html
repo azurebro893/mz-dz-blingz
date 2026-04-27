@@ -1,139 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mz Dz Blingz</title>
-    <style>
-        /* General Styles */
-        body {
-            background-color: #0b010d;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MZ Dazzlin Blingz</title>
 
-        /* Logo Styling */
-        .logo-container img {
-            max-width: 250px;
-            height: auto;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        h1 {
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-
-        .subtitle {
-            color: #a855f7;
-            margin-bottom: 30px;
-            font-size: 1.2rem;
-        }
-
-        /* Button Styling */
-        .cta-button {
-            background: linear-gradient(90deg, #f43f5e, #2dd4bf);
-            border: none;
-            color: black;
-            padding: 15px 35px;
-            font-weight: bold;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(45, 212, 191, 0.6);
-        }
-
-        /* Visionary Section Layout Fix */
-        .visionary-card {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 20px;
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            text-align: left;
-        }
-
-        .visionary-image-container {
-            flex-shrink: 0;
-        }
-
-        .visionary-image-container img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid #a855f7;
-            object-fit: cover;
-            display: block;
-        }
-
-        .visionary-text {
-            flex: 1;
-        }
-
-        .visionary-text h2 {
-            margin: 0 0 10px 0;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .visionary-text p {
-            color: #ccc;
-            font-style: italic;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 650px) {
-            .visionary-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            .visionary-image-container {
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="assets/home.png" alt="Mz D'z Logo">
+  <!-- Header -->
+  <header class="header">
+    <h1>MZ Dazzlin Blingz</h1>
+    <p class="tagline">Luxury Blinged Sports Apparel</p>
+  </header>
+
+  <!-- Pistons Collection -->
+  <section class="collection">
+    <h2>PISTONS BLING COLLECTION</h2>
+
+    <!-- Product Card -->
+    <div class="product-card">
+      <img src="images/pistons-jersey-1.png" alt="Pistons Bling Jersey" />
+
+      <div class="product-info">
+        <h3>Pistons Bling Jersey</h3>
+        <p class="price">$175</p>
+
+        <a
+          href="https://www.tiktok.com/@mzdzdazzlinblingznthingz"
+          target="_blank"
+          class="btn"
+        >
+          View Worn Live
+        </a>
+
+        <a
+          href="mailto:debra.day@yahoo.com?subject=Pistons Jersey Inquiry"
+          class="btn secondary"
+        >
+          Inquire to Buy
+        </a>
+      </div>
     </div>
 
-    <h1>Elevate Your Shine</h1>
-    <p class="subtitle">Custom Blinged Apparel by Debra Day</p>
-
-    <a href="https://www.tiktok.com/@mzdzdazzlinblingznthingz" target="_blank" class="cta-button">BROWSE THE COLLECTION ON TIKTOK</a>
-
-    <div class="visionary-card">
-        <div class="visionary-image-container">
-            <img src="assets/debra.png" alt="Debra Day">
-        </div>
-        <div class="visionary-text">
-            <h2>The Visionary</h2>
-            <p>"I've dedicated my career to empowering others through high-impact retreats. Now, I'm bringing that same energy to your wardrobe."</p>
-        </div>
-    </div>
+  </section>
 
 </body>
 </html>
